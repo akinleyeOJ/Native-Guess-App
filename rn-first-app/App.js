@@ -29,15 +29,15 @@ export default function App() {
     </View>
 
     <FlatList 
-    data={courseGoals} 
-    renderItem={itemData => (
-      <View style={styles.listItem}>
-        <Text>{itemData.item.value}</Text>
+      keyExtractor={(item, index) => item.id}
+      data={courseGoals} 
+      renderItem={itemData => (
+        <View style={styles.listItem}>
+          <Text>{itemData.item.value}</Text>
+        </View>
+          )} 
+        /> 
       </View>
-    )} 
-    />
-        
-    </View>
   );
 }
 
